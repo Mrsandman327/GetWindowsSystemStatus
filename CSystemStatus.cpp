@@ -409,22 +409,6 @@ double CSystemStatus::GetPhysicalMemoryUsage()
 	double MemUsage = memInfo.dwMemoryLoad;
 	return MemUsage;
 }
- 
-//使用率百分数转换浮点数
-float CSystemStatus::TransPercentToFloatValue(const double dValue)
-{
-	float fResult = 0.00;
-	if (dValue == 0){
-		return fResult;
-	}
-	double dTemp = dValue * 10;
-	int iTemp = (int)dValue;
-	float fCmp = dTemp - iTemp;
-	fCmp = fCmp * 10;
-	iTemp = iTemp + (int)fCmp / 10.0;
-	fResult = iTemp / 1000.0;
-	return fResult;
-}
 
 //获取网卡信息（在获取网速时需要用到网卡描述）
 void CSystemStatus::GetNetCardInfo(std::vector<NETCARDINFO> &vectorNetCard)

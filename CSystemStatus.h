@@ -163,8 +163,6 @@ public:
 	void		GetCPUid(std::string &CPUid);											//获取CPUid
 
 	BOOL		GetHDSerial(std::string &HDSerial);										//获取硬盘物理序列号（需要管理员权限）
-
-	float		TransPercentToFloatValue(const double dValue);							//百分数转浮点数
 private:
 	PDH_HQUERY		m_Query; 
 	PDH_HCOUNTER	m_CpuTotal,m_DiskRead,m_DiskWrite,m_NetDownload,m_NetUpload;
